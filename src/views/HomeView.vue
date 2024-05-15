@@ -1,11 +1,34 @@
 <script setup>
+import HeaderCleint from "../components/HeaderClient.vue"
+import { useStoreCategory} from "@/stores/categoryStore";
+import {onMounted} from "vue";
+import CategoryItem from "@/components/CategoryItem.vue";
 
+const categoryStore = useStoreCategory();
+
+onMounted(() => {
+  categoryStore.getCategory()
+    }
+
+)
 </script>
 
 <template>
   <div class="mycard">
+    <HeaderCleint/>
     <div>
-      ici
+      <div>
+        <p>Catégotie :</p>
+      </div>
+      <div v-if="categoryStore.categoryLoading">
+        Category Loading ...
+      </div>
+      <div v-else-if="categoryStore.categoryCount > 0" class="containerCategorie">
+        <CategoryItem
+            v-for="category in categoryStore.categoryItem"
+            :key="category"
+            :category="category"/>
+      </div>
     </div>
     <div>
       la
@@ -20,8 +43,9 @@
 <style scoped>
 .mycard {
   height: 100vh;
-  align-content: center;
-  text-align: -webkit-center;
-  background-color: red;
+}
+.containerCategorie{
+  flex-direction: row;
+  display: flex;
 }
 </style>
