@@ -19,7 +19,13 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Run the Docker container
+### Build the Docker image from the Dockerfile
+```
+docker build -t vuejs-app .
+```
+### Run the Docker container
+```
+docker run -p 8080:8080 vuejs-app
+```
 # exam_front
