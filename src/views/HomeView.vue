@@ -43,10 +43,6 @@ onMounted(() => {
             :cocktail="cocktail"/>
       </div>
     </div>
-    <div>
-      re
-    </div>
-
   </div>
 
 </template>

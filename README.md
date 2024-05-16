@@ -26,6 +26,6 @@ docker build -t vuejs-app .
 ```
 ### Run the Docker container
 ```
-docker run -p 8080:8080 vuejs-app
+docker run -p 8000:8080 vuejs-app
 ```
 # exam_front
