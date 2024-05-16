@@ -19,17 +19,17 @@ const isValidPassword = (password)=>{
 
 const submitForm = ( )=>{
   if(!isValidPassword(user.value.password)){
-    alert('Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long.')
+    alert('Le mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule, un chiffre, un caractère spécial et comporter au moins 10 caractères.')
     return;
   }
   if(user.value.password !== user.value.confirmPassword){
-    alert('Password do not match')
+    alert('Les mots de passe ne correspondent pas.')
     return;
   }
 
   try{
     authStore.registerUser(user.value.email , user.value.password);
-    alert('Account created succedddfully')
+    alert('Compte créé avec succès')
     router.push("/login")
 
   }catch(errror){

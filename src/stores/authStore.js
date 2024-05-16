@@ -21,7 +21,7 @@ export const useAuthStore = defineStore('auth', ()=>{
             localStorage.setItem('currentUser',email);
             localStorage.setItem('isLogged','true');
         }else{
-            throw new Error ('Invalid Credentials')
+            throw new Error ('Les informations d\'identification sont invalides.')
         }
     }
 
