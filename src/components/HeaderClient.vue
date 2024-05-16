@@ -6,7 +6,7 @@
     <div class="icon">
       <img src="../assets/logo.jpg" alt="Image" class="img">
     </div>
-    <div class="title">
+    <div class="titleBar">
       <h1>Bienvenue au BAR APP</h1>
     </div>
     <div class="containterFaIcon">
@@ -34,7 +34,7 @@
 .faIcon{
   padding-right: 20%;
 }
-.title{
+.titleBar{
   width:35%;
 }
 .containterFaIcon{
@@ -42,5 +42,6 @@
 }
 h1{
   color: #fff;
+
 }
 </style>

@@ -14,7 +14,6 @@ export const useAuthStore = defineStore('auth', ()=>{
     const loginUser = (email, password) =>{
         let users = JSON.parse(localStorage.getItem('users')) || []
         const user = users.find(u => u.email === email && u.password === password)
-        console.log(email)
         if(user){
             currentUser.value = email;
             isLogged.value = true;

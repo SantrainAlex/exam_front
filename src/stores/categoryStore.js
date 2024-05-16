@@ -17,7 +17,6 @@ export const useStoreCategory = defineStore('storeCategory', () => {
             if(response){
                 categoryCount.value = response.data.drinks.length;
                 categoryItem.value = response.data.drinks;
-                console.log(categoryCount.value)
             }else {
                 throw new Error('Failed to get category')
             }
@@ -25,7 +24,7 @@ export const useStoreCategory = defineStore('storeCategory', () => {
             categoryItem.value = []
             categoryCount.value = 0
         }
-        categoryLoading.value = 0
+        categoryLoading.value = false
     }
     return{categoryLoading, categoryItem, categoryCount, getCategory}
 })

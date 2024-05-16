@@ -14,7 +14,6 @@ const user = ref({
 
 const submitForm = ()=>{
   try{
-    console.log(user.value)
     authStore.loginUser(user.value.email, user.value.password);
     router.push("/home")
   }catch(error){
